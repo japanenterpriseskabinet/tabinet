@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>旅ネット｜国内旅行・宿・ホテルの予約は たびネット.net</title>
+<style>
+:root{--o:#f26a00;--cream:#fff4e6;--line:#e0b080}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+body{margin:0;background:#efebe4;color:#333;font:13px/1.6 Meiryo,"Hiragino Kaku Gothic ProN","MS PGothic",sans-serif}
+a{color:#0b4ea2}
+.ad{display:block;text-decoration:none;color:#fff;text-align:center;cursor:pointer}
+.strip{background:linear-gradient(90deg,#fff 0,#fff 30%,#f6246a 30%);font-weight:bold;text-align:center}
+.strip a{display:block;max-width:960px;margin:0 auto;padding:6px;color:#fff;background:linear-gradient(90deg,#1b8a3a 0,#1b8a3a 38%,#f6246a 38%)}
+#page{display:flex;justify-content:center;gap:10px;padding:0 6px}
+.sk{width:130px;flex:none;margin-top:10px;display:none}
+.sk .ad{padding:30px 8px;margin-bottom:10px;font-weight:bold;font-size:15px;line-height:1.4}
+.sk b{display:block;font-size:26px;color:#ffe45e}
+.s1{background:linear-gradient(#c8102e,#e8441e)}.s2{background:linear-gradient(#1b7a43,#2aa060)}
+@media(min-width:1260px){.sk{display:block}}
+#wrap{width:960px;max-width:100%;background:#fff;border:1px solid #d8d0c2;border-top:0;position:relative}
+.top{background:#fafafa;border-bottom:1px solid #ddd;padding:3px 12px;font-size:11px;display:flex;justify-content:space-between;flex-wrap:wrap;color:#555}
+.top span a{margin-left:10px}
+.head{display:flex;align-items:center;gap:16px;padding:10px 14px;border-bottom:3px solid var(--o)}
+#logo{font:bold 30px/1 Meiryo,sans-serif;color:var(--o);cursor:pointer;user-select:none;letter-spacing:-1px}
+#logo small{display:block;font:10px Meiryo,sans-serif;color:#888;letter-spacing:0;margin-top:3px}
+.pt{border:1px solid var(--line);background:var(--cream);padding:4px 10px;border-radius:12px;font-size:12px;color:#8a4a00;text-decoration:none}
+.tg{flex:1;text-align:right;color:#777;font-size:12px}
+#note{position:absolute;right:10px;top:70px;background:#fff;border:1px solid var(--o);border-radius:4px;padding:5px 26px 5px 10px;font-size:12px;box-shadow:0 1px 4px #0003;color:#c04f00}
+#note u{position:absolute;right:8px;top:4px;cursor:pointer;text-decoration:none}
+.nav{display:flex;flex-wrap:wrap;background:linear-gradient(#fff,#f4e6d4);border-bottom:1px solid var(--line)}
+.nav a{padding:7px 14px;border-right:1px solid var(--line);text-decoration:none;color:#5a3a1a;font-weight:bold;font-size:12px}
+.nav a.on{background:var(--o);color:#fff}
+.nt{padding:8px 14px 0;font-size:12px}.nt a{display:block}
+.cols{display:flex;gap:10px;padding:10px 14px;align-items:flex-start}
+.c1{width:300px;flex:none}.c2{flex:1;min-width:0}.c3{width:150px;flex:none}
+.box{border:2px solid var(--o);margin-bottom:10px;background:#fff}
+.box h2{margin:0;background:var(--o);color:#fff;font-size:13px;padding:3px 8px}
+.in{padding:8px;background:var(--cream)}
+.map{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:8px}
+.map button{background:#fff;border:1px solid var(--line);padding:9px 2px;cursor:pointer;font:12px Meiryo,sans-serif;color:#5a3a1a}
+.map button:hover{background:#ffe2c2}
+.pur{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #eee}
+.pur a{padding:9px 8px;border:1px solid #eee;margin:-1px 0 0 -1px;text-decoration:none;color:#444;font-size:12px}
+.pur a:hover{background:var(--cream)}
+input[type=text],input[type=date],select{font:13px Meiryo,sans-serif;padding:4px;border:1px solid #aaa;max-width:100%}
+#dest{width:calc(100% - 64px)}
+.kb{background:linear-gradient(#4a7fd0,#1c4fa0);color:#fff;border:1px solid #123a80;cursor:pointer;font:bold 12px Meiryo,sans-serif;padding:5px 10px}
+.big{width:100%;padding:9px;font-size:15px;margin-top:8px}
+.fr{margin:5px 0;font-size:12px}.fr label{margin-right:8px;white-space:nowrap}
+h3{font-size:14px;margin:12px 14px 6px;padding-left:6px;border-left:5px solid var(--o)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px}
+.tile{position:relative;height:110px;overflow:hidden;cursor:pointer;border:1px solid #ccc}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile b{position:absolute;left:0;right:0;bottom:0;padding:14px 8px 4px;color:#fff;text-shadow:1px 1px 2px #000;background:linear-gradient(transparent,#000a)}
+.c3 .ad{padding:16px 6px;margin-bottom:8px;font-weight:bold;font-size:13px;line-height:1.4}
+.c3 b{display:block;font-size:18px;color:#ffe45e}
+.a1{background:#e8441e}.a2{background:#7a3fb5}.a3{background:#14324f}.a4{background:#1b7a43}
+.log{border:1px solid #ccc;padding:8px;text-align:center;font-size:12px}
+.log .kb{display:block;margin-top:5px;width:100%}
+table.res{width:calc(100% - 28px);margin:0 14px;border-collapse:collapse}
+.res td{border:1px solid #ddd;padding:6px;vertical-align:top}
+.res img{width:110px;height:70px;object-fit:cover;display:block}
+.res .pr{color:#c8102e;font-weight:bold;font-size:15px;white-space:nowrap;text-align:right}
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 14px}
+.band .ad{padding:18px 6px;font-weight:bold}
+.foot{border-top:1px solid #ddd;background:#fafafa;text-align:center;padding:12px;font-size:11px;color:#777;margin-top:8px}
+@media(max-width:860px){.c1,.c3{display:none}.tiles{grid-template-columns:repeat(2,1fr)}.cols{display:block}}
+#md{position:fixed;inset:0;background:#0007;z-index:20;display:flex;align-items:center;justify-content:center}
+#mb{background:#fff;border:3px solid var(--o);padding:18px;width:440px;max-width:92vw;max-height:80vh;overflow:auto;font-size:13px}
+#mb h3{margin:0 0 10px;padding:0;border:0;font-size:16px}#mb input{width:100%;margin-bottom:8px;padding:6px}#mb table{width:100%;border-collapse:collapse}#mb td{border:1px solid #ddd;padding:5px}
+.sb{padding:0 14px 6px;font-size:12px}
+
+/* ---- realistic-style ads, hero, mascot ---- */
+.ad{position:relative}
+.pl{position:absolute;right:2px;top:2px;font:9px/1.5 Arial,sans-serif;background:#fff;color:#777;padding:0 4px;font-style:normal;z-index:2;opacity:.9}
+.o{text-shadow:-2px 0 #000,2px 0 #000,0 -2px #000,0 2px #000,-2px -2px #000,2px 2px #000,-2px 2px #000,2px -2px #000}
+.bu{display:inline-block;background:#ffe400;color:#d4001a;font-weight:900;font-size:14px;line-height:1.1;padding:20px 14px;clip-path:polygon(50% 0,61% 18%,80% 8%,80% 30%,100% 35%,86% 50%,100% 65%,80% 70%,80% 92%,61% 82%,50% 100%,39% 82%,20% 92%,20% 70%,0 65%,14% 50%,0 35%,20% 30%,20% 8%,39% 18%)}
+.bu em{font-style:normal;font-size:30px}
+.rb{background:#fff;color:#c8102e;border:2px solid #c8102e;padding:3px 10px;font-size:13px;border-radius:3px;font-weight:bold}
+.dt{background:#000;color:#ffe400;padding:2px 8px;font-size:11px}
+.sk .sky{min-height:430px;padding:16px 6px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;gap:8px;font-weight:bold;font-size:12px}
+.sk .k1{background:repeating-linear-gradient(45deg,#c8102e 0 10px,#b00d28 10px 20px)}
+.sk .k1 small{background:#fff;color:#c8102e;padding:1px 8px;font-size:11px}
+.sk .k1 .o{font-size:27px;line-height:1.15;color:#ffe400}
+.sk .k2{background-size:cover;background-position:center;text-shadow:0 1px 4px #000}
+.sk .k2:before{content:"";position:absolute;inset:0;background:linear-gradient(#0000,#000b)}
+.sk .k2>*{position:relative}
+.sk .k2 .o{font-size:25px;color:#fff}
+.sk .k2 .tag{background:#f26a00;padding:2px 8px}
+.tick{background:#fff6cf;border-bottom:1px solid #e6d28a;overflow:hidden;white-space:nowrap;font-size:12px;color:#8a3b00;padding:3px 0}
+.tick span{display:inline-block;padding-left:100%;animation:mq 50s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+.hero{position:relative;height:210px;margin:10px 14px 0;overflow:hidden;background:#222}
+.sl{display:flex;flex-direction:column;justify-content:center;height:100%;padding:0 40px;background:center/cover;color:#fff;text-decoration:none;text-shadow:0 2px 6px #000}
+.sl b{font-size:36px;letter-spacing:2px}.sl span{font-size:15px;margin-top:6px}
+.hero button{position:absolute;top:50%;transform:translateY(-50%);background:#0007;color:#fff;border:0;font-size:26px;width:34px;height:60px;cursor:pointer}
+.hp{left:0}.hn{right:0}
+.dots{position:absolute;bottom:8px;left:0;right:0;text-align:center}
+.dots i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff6;margin:0 3px;cursor:pointer}.dots i.on{background:#fff}
+.wall{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 14px 0}
+.bn{height:78px;display:flex;align-items:center;gap:10px;padding:0 10px;text-align:left;border:1px solid #0003;border-radius:3px;overflow:hidden}
+.bn em{font-style:normal;font-size:36px}.bn span{font-size:12px;line-height:1.3;font-weight:bold}.bn b{display:block;font-size:15px}.bn strong{font-size:20px;color:#d4001a}
+.c3 .a5{background:linear-gradient(#0002,#000b),url(img/snow-monkey.jpg) center/cover;padding:10px 6px}
+.mi{width:44px;height:48px;flex:none}
+#mas{position:fixed;left:10px;bottom:8px;z-index:15;width:92px;cursor:pointer;animation:bn 2.4s ease-in-out infinite}
+@keyframes bn{50%{transform:translateY(-6px)}}
+#mas svg{display:block}
+#bub{position:absolute;left:84px;bottom:70px;width:190px;background:#fff;border:2px solid #7a4a1e;border-radius:12px;padding:8px 10px;font-size:12px;color:#5a3a1a;box-shadow:0 2px 6px #0003}
+#pop{position:fixed;right:12px;bottom:12px;width:230px;background:#fff;border:3px solid #c8102e;z-index:15;padding:12px;text-align:center;box-shadow:0 2px 10px #0005;font-size:12px}
+#pop b{display:block;font-size:20px;color:#c8102e}#pop u{position:absolute;right:6px;top:0;text-decoration:none;color:#999;cursor:pointer;font-size:16px}
+@media(max-width:860px){.wall{grid-template-columns:1fr}.hero{height:170px}.sl b{font-size:26px}#bub{width:150px}}
+</style>
+</head>
+<body>
+<div class="strip"><a class="ad" href="#">たびネット スーパーSALE 12/31まで　｜　モバイルご契約者様なら 最大10,000ポイント！</a></div>
+<div id="page">
+ <div class="sk"><a class="ad sky k1" href="#"><i class="pl">PR</i><small>ニッポンマート</small><b class="o">冬の<br>大感謝祭</b><span class="bu">最大<br><em>50</em>%OFF</span><span class="rb">送料無料</span><span class="dt">1/10(日) 23:59まで</span></a></div>
+ <div id="wrap">
+  <div class="top"><span><a href="#" data-m="help">サイトのご利用方法</a>｜<a href="#" data-m="help">ヘルプ</a>｜<a href="#" data-m="help">お問い合わせ</a></span><span>こんにちは♪ゲストさん<a href="#" data-m="login">ログイン</a><a href="#" data-m="join">会員登録</a><a href="#" data-m="res">予約照会・変更・キャンセル</a><a href="#" data-m="mypage">マイページ</a></span></div>
+  <div class="head">
+   <div id="logo">旅ネット<small>たびネット.net ／ 日本最大級の宿・ホテル予約サイト</small></div>
+   <svg class="mi" viewBox="0 0 100 110"><use href="#tnS"/></svg><a class="pt" href="#">ポイントがたまる・つかえる ★Pontaカード対応</a>
+   <div class="tg">国内旅行・海外旅行・宿・ホテルの予約は<br>旅ネット</div>
+  </div>
+  <div id="note" data-m="notice" style="cursor:pointer">新しいお知らせが届いています！［8］<u onclick="event.stopPropagation();this.parentNode.hidden=true">×</u></div>
+  <div class="nav"><a class="on" href="#" data-tab="宿・ホテル">宿・ホテル</a><a href="#" data-tab="たびパック">たびパック（交通＋宿泊）</a><a href="#" data-tab="遊び・体験">遊び・体験</a><a href="#" data-tab="観光ガイド">観光ガイド</a><a href="#" data-tab="レンタカー">レンタカー</a><a href="#" data-tab="航空券">航空券</a><a href="#" data-tab="ゴルフ">ゴルフ</a><a href="#" data-tab="海外旅行">海外旅行</a></div>
+  <div class="tick"><span>【速報】冬の北海道ツアー受付開始　／　年末年始の宿泊予約は12/20まで　／　毎週金曜はポイント3倍デー　／　春の京都・桜特集を公開しました　／　会員登録で500円OFFクーポンをプレゼント</span></div>
+  <div class="nt"><a href="#" data-m="notice">北陸応援割について</a><a href="#" data-m="notice">【復旧】ヘルプページおよびお問い合わせフォーム障害発生のお詫び</a></div>
+
+  <div class="hero"><a class="sl" id="sl" href="#"><b id="h1"></b><span id="h2"></span></a><button class="hp" onclick="hero(hi-1)">‹</button><button class="hn" onclick="hero(hi+1)">›</button><div class="dots" id="dots"></div></div>
+  <div class="cols">
+   <div class="c1">
+    <div class="box"><h2>地図から探す</h2><div class="map" id="map"></div></div>
+    <div class="box"><h2>目的から探す</h2><div class="pur"><a href="#" data-k="出張・ビジネスホテル" data-t="ビジネス">出張・ビジネスホテル</a><a href="#" data-k="温泉・露天風呂" data-t="温泉">温泉・露天風呂</a><a href="#" data-k="高級ホテル・旅館" data-t="高級">高級ホテル・旅館</a><a href="#" data-k="日帰り・デイユース" data-t="日帰り">日帰り・デイユース</a><a href="#" data-tab="たびパック">たびパック</a><a href="#" data-tab="遊び・体験">遊び・体験</a><a href="#" data-tab="レンタカー">レンタカー</a><a href="#" data-m="coupon">クーポン</a></div></div>
+   </div>
+   <div class="c2">
+    <div class="box"><h2>宿名・キーワードから探す</h2><div class="in"><input type="text" id="dest" placeholder="例：箱根　温泉　京都駅"> <button class="kb" id="go">検索</button></div></div>
+    <div class="box"><h2 id="dh">日付から探す</h2><div class="in">
+     <div class="fr"><label><input type="radio" name="t" checked> 宿・ホテル</label><label><input type="radio" name="t"> 航空券＋宿泊</label><label><input type="radio" name="t"> 新幹線＋宿泊</label><label><input type="radio" name="t"> 遊び・体験</label></div>
+     <div class="fr">チェックイン <input type="date" value="2027-01-01"> チェックアウト <input type="date" value="2027-01-02"></div>
+     <div class="fr">部屋数 <select><option>1</option><option>2</option><option>3</option></select> 大人 <select><option>1</option><option selected>2</option><option>3</option><option>4</option></select>名 子供 <select><option>0</option><option>1</option><option>2</option></select>名</div>
+     <div class="fr"><select><option>都道府県選択</option><option>北海道</option><option>東京都</option><option>神奈川県</option><option>岐阜県</option><option>京都府</option><option>大分県</option></select></div>
+     <div class="fr"><label><input type="checkbox"> 禁煙ルーム</label><label><input type="checkbox"> 温泉</label><label><input type="checkbox"> ツイン</label><label><input type="checkbox"> シングル</label><label><input type="checkbox"> 露天風呂付き客室</label></div>
+     <button class="kb big" id="go2">検索する</button>
+    </div></div>
+   </div>
+   <div class="c3">
+    <a class="ad a1" href="#">たびパック限定<b>5,000pt</b>プレゼント</a>
+    <a class="ad a2" href="#">ステージプログラム<br>会員ステージに応じてお得な特典あり♪</a>
+    <a class="ad a3" href="#">ラグジュアリー<br>SALE<b>最大30%OFF</b></a>
+    <a class="ad a4" href="#">法人向けプランで<br>出張コストの削減が可能！</a>
+    <a class="ad a5" href="#"><i class="pl">PR</i><svg width="46" height="50" viewBox="0 0 100 110"><use href="#tnS"/></svg><br>たびたぬのおすすめ！<b>冬の雪見温泉</b></a>
+    <div class="log">こんにちは♪ゲストさん<button class="kb" data-m="points">ポイントを表示する</button><button class="kb" data-m="join" style="background:#f26a00;border-color:#c04f00">会員登録する（無料）</button></div>
+   </div>
+  </div>
+
+  <div id="rw" hidden><h3 id="rt"></h3><div class="sb">並び替え：<select id="so"><option value="0">おすすめ順</option><option value="1">料金が安い順</option><option value="2">評価が高い順</option></select></div><table class="res" id="rl"></table></div>
+
+  <h3>特集で探す</h3>
+  <div class="tiles" id="feat"></div>
+  <div class="wall">
+   <a class="ad bn" href="#" style="background:linear-gradient(90deg,#fff3a0,#ffd400);color:#5a3a00"><i class="pl">PR</i><em>🍙</em><span><b>むすび庵</b>お弁当配達 ワンコイン<strong>500円〜</strong></span></a>
+   <a class="ad bn" href="#" style="background:linear-gradient(90deg,#111,#3a3020);color:#f5d27a"><i class="pl">PR</i><em>📱</em><span><b>SIMきらり</b>月額<strong style="color:#ffd400">990円〜</strong><br>契約縛りなし</span></a>
+   <a class="ad bn" href="#" style="background:linear-gradient(90deg,#ffd6e6,#ffb3d1);color:#8a1f4f"><i class="pl">PR</i><em>🧣</em><span><b>たぬ吉雑貨店</b>かわいい手ぬぐい 新作入荷</span></a>
+   <a class="ad bn" href="#" style="background:linear-gradient(90deg,#e8102e,#a8001a);color:#fff"><i class="pl">PR</i><em>👘</em><span><b>冬物クリアランス</b>最大<strong style="color:#ffe400">50%OFF</strong> 本日終了！</span></a>
+   <a class="ad bn" href="#" style="background:linear-gradient(90deg,#d8f5c4,#8fd36a);color:#1f4d0a"><i class="pl">PR</i><em>🍵</em><span><b>お茶の里</b>新茶予約受付中 初回送料無料</span></a>
+   <a class="ad bn" href="#" style="background:linear-gradient(90deg,#1b3a7a,#0f2350);color:#fff"><i class="pl">PR</i><em>💼</em><span><b>出張手配サービス</b>法人向け 年会費<strong style="color:#ffe400">0円</strong></span></a>
+  </div>
+  <h3>おすすめの温泉・観光地</h3>
+  <div class="tiles" id="tiles"></div>
+  <h3>人気の宿ランキング</h3><table class="res" id="rank"></table>
+  <div class="band"><a class="ad a1" href="#">国内宿泊予約で使える<br>クーポンまとめ</a><a class="ad a3" href="#">冬の味覚 カニ旅行特集<br>今すぐチェック</a><a class="ad a2" href="#">ふるさと納税で旅行にいこう<br>寄付金額の最大30%分クーポン</a></div>
+  <div class="foot"><a href="#" data-m="help">サイトのご利用方法</a>｜<a href="#" data-m="help">ヘルプ</a>｜<a href="#" data-m="info">会社概要</a>｜<a href="#" data-m="info">プライバシーポリシー</a>｜<a href="#" data-m="info">利用規約</a>｜<a href="#" data-m="info">サイトマップ</a><br>Copyright © 2012 Tabi-Net Co., Ltd. All rights reserved.</div>
+ </div>
+ <div class="sk"><a class="ad sky k2" href="#" style="background-image:url(img/kiyomizu.jpg)"><i class="pl">PR</i><span class="tag">たびネット限定</span><b class="o">春の京都へ</b><span>清水寺と桜<br>特集ページ公開中</span><span class="rb">宿泊 最大<br>20%OFF</span></a></div>
+</div>
+<svg width="0" height="0" style="position:absolute"><symbol id="tnS" viewBox="0 0 100 110"><ellipse cx="50" cy="104" rx="26" ry="5" fill="#0002"/><ellipse cx="32" cy="98" rx="11" ry="7" fill="#6b4220"/><ellipse cx="68" cy="98" rx="11" ry="7" fill="#6b4220"/><ellipse cx="50" cy="80" rx="27" ry="24" fill="#9a6a3a"/><ellipse cx="50" cy="84" rx="17" ry="16" fill="#f6e4bf"/><circle cx="24" cy="26" r="10" fill="#7a4a1e"/><circle cx="76" cy="26" r="10" fill="#7a4a1e"/><circle cx="24" cy="26" r="4.5" fill="#2e1c0e"/><circle cx="76" cy="26" r="4.5" fill="#2e1c0e"/><circle cx="50" cy="44" r="29" fill="#a8743f"/><ellipse cx="50" cy="52" rx="19" ry="14" fill="#f6e4bf"/><ellipse cx="36" cy="42" rx="8" ry="10" fill="#2e1c0e" transform="rotate(18 36 42)"/><ellipse cx="64" cy="42" rx="8" ry="10" fill="#2e1c0e" transform="rotate(-18 64 42)"/><circle cx="37" cy="41" r="3.6" fill="#fff"/><circle cx="63" cy="41" r="3.6" fill="#fff"/><circle cx="38" cy="41.5" r="1.8" fill="#111"/><circle cx="62" cy="41.5" r="1.8" fill="#111"/><ellipse cx="50" cy="51" rx="4.5" ry="3.2" fill="#2e1c0e"/><path d="M43 58q7 6 14 0" stroke="#2e1c0e" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="31" cy="55" r="4" fill="#f4a5a5" opacity=".8"/><circle cx="69" cy="55" r="4" fill="#f4a5a5" opacity=".8"/><path d="M30 17q20-12 40 0l-3 8q-17-7-34 0z" fill="#fff" stroke="#2a6fb8" stroke-width="2"/><path d="M33 20q17-6 34 0" stroke="#2a6fb8" stroke-width="2" fill="none"/><rect x="80" y="38" width="3" height="46" fill="#6b4220"/><path d="M83 38h16v14H83z" fill="#c8102e"/><text x="91" y="49" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">旅</text><ellipse cx="76" cy="76" rx="8" ry="6" fill="#9a6a3a" transform="rotate(-30 76 76)"/></symbol></svg>
+<div id="mas"><div id="bub" hidden></div><svg width="92" height="101" viewBox="0 0 100 110"><use href="#tnS"/></svg></div>
+<div id="pop" hidden><u onclick="event.stopPropagation();this.parentNode.hidden=true">×</u><i class="pl" style="right:auto;left:2px">PR</i><b>初回限定</b>500円OFFクーポン<br><small>会員登録で今すぐGET！</small></div>
+<div id="md" hidden><div id="mb"></div></div>
+<script>
+// ---- 設定 / Settings ----
+var SECRET='hakone99';                                           // type this in the keyword box, then search
+var GAMES_URL='https://japanenterpriseskabinet.github.io/library/';   // your games site address
+var $=function(i){return document.getElementById(i)};
+var clicks=0,ct,mode='宿・ホテル',lbl='',force='',RES=[];
+var MU={'宿・ホテル':1,'たびパック':1.8,'遊び・体験':.3,'観光ガイド':.25,'レンタカー':.45,'航空券':2.4,'ゴルフ':.9,'海外旅行':6};
+var DATA=[
+ {n:'桜荘（温泉旅館）',d:'貸切露天風呂あり・夕朝食付き',p:12800,r:4.4,i:'hakone-river',a:'箱根 神奈川 関東',t:['温泉','露天風呂付き客室','禁煙ルーム']},
+ {n:'ホテルグランド瑞穂',d:'駅から徒歩3分・全室禁煙・Wi-Fi無料',p:7400,r:4.1,i:'nihonbashi',a:'東京 日本橋 関東',t:['ビジネス','禁煙ルーム','シングル','ツイン']},
+ {n:'古民家の宿 飛騨庵',d:'囲炉裏のある離れ・郷土料理',p:15600,r:4.6,i:'hida-village',a:'飛騨 高山 岐阜 中部',t:['温泉','高級','露天風呂付き客室']},
+ {n:'ビジネスイン旭',d:'シングル・ツイン・大浴場あり',p:5900,r:3.9,i:'ginza',a:'東京 銀座 関東',t:['ビジネス','シングル','ツイン','禁煙ルーム']},
+ {n:'ホテル東京ステーション',d:'東京駅直結・クラシックな客室',p:28000,r:4.7,i:'tokyo-station',a:'東京 丸の内 関東',t:['高級','禁煙ルーム','ツイン']},
+ {n:'祇園の宿 花見小路',d:'京町家の風情を楽しむ',p:18900,r:4.5,i:'kyoto',a:'京都 祇園 近畿',t:['高級','禁煙ルーム']},
+ {n:'湖畔の湯 河口湖',d:'富士山ビューの露天風呂',p:16800,r:4.5,i:'fuji',a:'河口湖 山梨 甲信越 富士',t:['温泉','露天風呂付き客室','禁煙ルーム']},
+ {n:'別府 地獄めぐりの宿',d:'源泉かけ流しの名湯',p:11200,r:4.3,i:'beppu',a:'別府 大分 九州',t:['温泉','日帰り']},
+ {n:'町家ステイ 高山',d:'古い町並みの中の小さな宿',p:9800,r:4.2,i:'takayama-street',a:'飛騨 高山 岐阜 中部',t:['シングル','ツイン']},
+ {n:'旅籠 さんまち',d:'朝市まで徒歩5分・日帰り入浴可',p:8600,r:4.0,i:'takayama-old',a:'飛騨 高山 岐阜 中部',t:['日帰り','温泉']},
+ {n:'ホテル目黒リバーサイド',d:'目黒川の夜桜を見下ろす客室',p:14800,r:4.5,i:'meguro',a:'東京 目黒 桜 関東',t:['禁煙ルーム','ツイン']},
+ {n:'ゲストハウス 浅草そら',d:'浅草寺まで徒歩5分・屋上テラス',p:6800,r:4.2,i:'asakusa',a:'東京 浅草 関東',t:['シングル','禁煙ルーム']},
+ {n:'アキバ ステーションホテル',d:'電気街口すぐ・ゲーム好きに人気',p:8200,r:4.0,i:'akihabara-night',a:'東京 秋葉原 アキバ 関東',t:['ビジネス','シングル']},
+ {n:'スカイツリービューホテル',d:'夜景が見える高層階',p:19800,r:4.6,i:'skytree',a:'東京 夜景 スカイツリー 押上 関東',t:['高級','禁煙ルーム','ツイン']},
+ {n:'清水の宿 さくら庵',d:'清水寺まで徒歩10分・桜の名所',p:21800,r:4.7,i:'kiyomizu',a:'京都 清水 桜 近畿',t:['高級','禁煙ルーム']},
+ {n:'東山 町家ホテル',d:'石畳の路地にたたずむ一棟貸し',p:24500,r:4.8,i:'higashiyama',a:'京都 東山 祇園 桜 近畿',t:['高級','禁煙ルーム']},
+ {n:'伏見稲荷 ゲストハウス',d:'千本鳥居まで徒歩3分',p:5200,r:4.1,i:'fushimi',a:'京都 伏見 近畿',t:['シングル','日帰り']},
+ {n:'青森ねぶた 祭りの宿',d:'祭り期間は早めのご予約を',p:13600,r:4.3,i:'nebuta',a:'青森 東北 祭 ねぶた',t:['禁煙ルーム','ツイン']},
+ {n:'地獄谷 雪見の湯宿',d:'野猿公苑まで送迎・雪見露天',p:17400,r:4.6,i:'snow-monkey',a:'長野 甲信越 雪見 温泉 猿',t:['温泉','露天風呂付き客室']},
+ {n:'富士吉田 桜の宿',d:'忠霊塔と富士山を望む',p:12400,r:4.4,i:'chureito',a:'山梨 富士 桜 甲信越',t:['温泉','禁煙ルーム']},
+ {n:'ベイクルーズ 客船プラン',d:'海の上のリゾート 2泊3日',p:52000,r:4.5,i:'cruise',a:'クルーズ 横浜 関東',t:['高級','ツイン']},
+ {n:'大江戸まつり 盆踊りの宿',d:'夏祭りの夜を楽しむ',p:9400,r:4.0,i:'obon',a:'東京 祭 盆踊り 関東',t:['シングル','ツイン']},
+ {n:'舞妓体験つき 祇園旅館',d:'着付け体験プラン',p:26800,r:4.6,i:'maiko',a:'京都 祇園 舞妓 近畿',t:['高級','禁煙ルーム']}
+];
+var M={
+ login:`<h3>ログイン</h3><p>会員ID（メールアドレス）</p><input><p>パスワード</p><input type="password"><button class="kb" onclick="err('IDまたはパスワードが正しくありません。')">ログイン</button><p id="me" style="color:#c8102e"></p>`,
+ join:`<h3>会員登録（無料）</h3><p>お名前</p><input><p>メールアドレス</p><input><button class="kb" onclick="err('ただいま会員登録システムのメンテナンス中です。しばらくしてからお試しください。')">確認画面へ</button><p id="me" style="color:#c8102e"></p>`,
+ res:`<h3>予約照会・変更・キャンセル</h3><p>予約番号</p><input><button class="kb" onclick="err('該当するご予約が見つかりませんでした。')">照会する</button><p id="me" style="color:#c8102e"></p>`,
+ mypage:`<h3>マイページ</h3><p>マイページのご利用にはログインが必要です。</p>`,
+ points:`<h3>ポイント</h3><p>ポイントを表示するにはログインしてください。</p>`,
+ coupon:`<h3>クーポン</h3><p>ご利用可能なクーポンはありません。会員登録（無料）をすると、お得なクーポンが届きます。</p>`,
+ notice:`<h3>お知らせ</h3><p>・北陸応援割について</p><p>・年末年始のご予約に関するご案内</p><p>・【復旧】ヘルプページ障害のお詫び</p><p>・キャンセル料に関するお知らせ</p><p>・冬の温泉特集を公開しました</p><p>・スマートフォン向けサイトをリニューアル</p>`,
+ help:`<h3>ヘルプ</h3><p><b>Q.</b> 予約はキャンセルできますか？<br><b>A.</b> プランごとのキャンセル規定をご確認ください。</p><p><b>Q.</b> ポイントはいつ付きますか？<br><b>A.</b> ご宿泊の翌月に付与されます。</p>`,
+ info:`<h3>お知らせ</h3><p>このページは現在準備中です。</p>`
+};
+function err(t){$('me').textContent=t}
+function modal(h){$('mb').innerHTML=h+'<p style="text-align:right;margin:10px 0 0"><button class="kb" onclick="$(\'md\').hidden=true">閉じる</button></p>';$('md').hidden=false}
+function openGames(){location.href=GAMES_URL}
+
+document.addEventListener('click',function(e){
+  var t=e.target;
+  if(t===$('md')){$('md').hidden=true;return}
+  if(t.closest('a[href="#"]'))e.preventDefault();
+  var x;
+  if(x=t.closest('[data-tab]'))return tab(x.dataset.tab);
+  if(x=t.closest('[data-k]')){lbl=x.dataset.k;force=x.dataset.t;$('dest').value='';return search()}
+  if(x=t.closest('[data-b]'))return plan(+x.dataset.b);
+  if(x=t.closest('[data-m]'))modal(M[x.dataset.m]||M.info);
+});
+function tab(m){
+  mode=m;document.querySelectorAll('.nav a').forEach(function(a){a.className=a.dataset.tab==m?'on':''});
+  $('dh').textContent='日付から探す（'+m+'）';
+  if(!$('rw').hidden)search();
+}
+function plan(i){
+  var p=DATA[i],f=function(x){return '¥'+(Math.round(p.p*MU[mode]*x/100)*100).toLocaleString('ja-JP')};
+  modal('<h3>'+p.n+'</h3><p>'+p.d+'</p><table><tr><td>素泊まり</td><td>'+f(.7)+'</td></tr><tr><td>朝食付き</td><td>'+f(.85)+'</td></tr><tr><td>1泊2食付き</td><td>'+f(1)+'</td></tr></table><p>総合評価：'+p.r+' / 5</p><button class="kb" onclick="err(\'ただいまアクセスが集中しております。しばらくしてからお試しください。\')">このプランで予約する</button><p id="me" style="color:#c8102e"></p>');
+}
+function rows(L){
+  return L.map(function(p){var k=DATA.indexOf(p);
+    return '<tr><td width="120"><img src="img/'+p.i+'.jpg" alt=""></td><td><b><a href="#" data-b="'+k+'">'+p.n+(mode=='宿・ホテル'?'':'（'+mode+'プラン）')+'</a></b><br>'+p.d+'<br>総合評価：'+p.r+' / 5</td><td class="pr">¥'+(Math.round(p.p*MU[mode]/100)*100).toLocaleString('ja-JP')+'<br><small style="color:#777;font-weight:normal">1名あたり</small><br><button class="kb" data-b="'+k+'">詳細を見る</button></td></tr>'}).join('');
+}
+function show(){
+  var L=RES.slice(),s=$('so').value;
+  if(s=='1')L.sort(function(a,b){return a.p-b.p});if(s=='2')L.sort(function(a,b){return b.r-a.r});
+  $('rl').innerHTML=rows(L);
+}
+$('so').onchange=show;
+function search(){
+  var q=$('dest').value.trim();
+  if(q.toLowerCase()===SECRET){$('dest').value='';openGames();return}
+  var need=[];document.querySelectorAll('.fr input[type=checkbox]:checked').forEach(function(c){need.push(c.parentNode.textContent.trim())});
+  if(force)need.push(force);force='';
+  var L=DATA;
+  if(q){var m=DATA.filter(function(p){return p.a.indexOf(q)>-1||p.n.indexOf(q)>-1||p.d.indexOf(q)>-1});if(m.length)L=m}
+  RES=L.filter(function(p){return need.every(function(n){return p.t.indexOf(n)>-1})});
+  var area=(q||lbl||'全国').replace(/[<>&"]/g,'');if(q)lbl='';
+  $('rt').textContent='「'+area+'」の'+mode+'　'+RES.length+'件';
+  if(!RES.length){$('rl').innerHTML='<tr><td>条件に合う宿・プランが見つかりませんでした。条件を変えてお試しください。</td></tr>'}else show();
+  $('rw').hidden=false;$('rw').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+$('go').onclick=$('go2').onclick=search;
+$('dest').onkeydown=function(e){if(e.key==='Enter')search()};
+
+// Secret way in: click the logo 3 times quickly (or search the secret word)
+$('logo').onclick=function(){clicks++;clearTimeout(ct);ct=setTimeout(function(){clicks=0},1500);if(clicks>=3){clicks=0;openGames()}};
+
+['北海道','東北','関東','甲信越','北陸','東海','近畿','中国','四国','九州','沖縄','東京'].forEach(function(r){
+  var b=document.createElement('button');b.textContent=r;b.onclick=function(){$('dest').value=r;search()};$('map').appendChild(b)});
+[['箱根','hakone-torii','温泉と芦ノ湖'],['飛騨高山','takayama-street','古い町並みと朝市'],['別府','beppu','地獄めぐりの名湯'],
+ ['東京駅周辺','tokyo-station','銀座・日本橋エリア'],['京都','kyoto','祇園・先斗町を歩く'],['河口湖','fuji','富士山の絶景']].forEach(function(t){
+  var d=document.createElement('div');d.className='tile';d.innerHTML='<img src="img/'+t[1]+'.jpg" alt=""><b>'+t[0]+'<br><small>'+t[2]+'</small></b>';
+  d.onclick=function(){$('dest').value=t[0].replace('飛騨高山','高山').replace('東京駅周辺','東京');search()};$('tiles').appendChild(d)});
+$('rank').innerHTML=rows(DATA.slice().sort(function(a,b){return b.r-a.r}).slice(0,5));
+
+// ===== hero slideshow / feature tiles / mascot / popup =====
+var TIPS=['温泉に入る前は「かけ湯」をしてね♪','新幹線の旅は駅弁が楽しみ！','桜の見頃は3月下旬〜4月上旬だよ','人気の宿は早めの予約がおすすめ！','雪の日は滑りにくい靴で出かけよう','お寺や神社では静かにお参りしようね','クーポンは会員登録でもらえるよ！'],mi=0,bt;
+function say(t){var b=$('bub');b.textContent=t;b.hidden=false;clearTimeout(bt);bt=setTimeout(function(){b.hidden=true},6000)}
+$('mas').onclick=function(){say(TIPS[mi++%TIPS.length])};
+setTimeout(function(){say('こんにちは！たびたぬだよ♪ わたしをクリックしてね')},1500);
+setTimeout(function(){$('pop').hidden=false},3500);
+var HS=[['kiyomizu','春の京都へ','清水寺と桜の絶景スポット','京都'],['chureito','富士山と桜','忠霊塔から望む春の景色','富士'],['nebuta','青森ねぶた祭','熱気あふれる夏の祭典','青森'],['fushimi','千本鳥居','伏見稲荷大社をめぐる旅','伏見'],['snow-monkey','雪見温泉','湯につかる猿たちに会いに','雪見']],hi=0;
+function hero(n){
+  hi=(n+HS.length)%HS.length;var s=HS[hi],e=$('sl');
+  e.style.backgroundImage='linear-gradient(90deg,#000a,#0000 75%),url(img/'+s[0]+'.jpg)';e.dataset.q=s[3];$('h1').textContent=s[1];$('h2').textContent=s[2];
+  $('dots').innerHTML='';HS.forEach(function(_,i){var d=document.createElement('i');d.className=i==hi?'on':'';d.onclick=function(){hero(i)};$('dots').appendChild(d)});
+}
+hero(0);setInterval(function(){hero(hi+1)},5500);
+[['桜の名所','meguro','桜','夜桜・花見スポット'],['祭り・イベント','obon','祭','夏祭り・盆踊り'],['東京の夜景','skytree','夜景','スカイツリーを望む'],['秋葉原','akihabara-sega','秋葉原','ゲーム・アニメの街'],
+ ['浅草','asakusa','浅草','浅草寺と仲見世'],['雪見温泉','snow-monkey','雪見','猿も入る名湯'],['客船クルーズ','cruise','クルーズ','海の上のリゾート'],['祇園・舞妓','maiko','舞妓','京の風情を体験']].forEach(function(t){
+  var d=document.createElement('div');d.className='tile';d.dataset.q=t[2];d.innerHTML='<img src="img/'+t[1]+'.jpg" alt=""><b>'+t[0]+'<br><small>'+t[3]+'</small></b>';$('feat').appendChild(d)});
+document.addEventListener('click',function(e){var x=e.target.closest('[data-q]');if(x){$('dest').value=x.dataset.q;search()}});
+</script>
+
+</body>
+</html>
